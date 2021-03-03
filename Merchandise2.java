@@ -19,8 +19,9 @@ public class Merchandise2 {
     public static double runningTotal;
     static boolean ordering = true;
 
+            
     public static void menu() {
-        System.out.println("Welcome \n1. BLACKPINK signed T-Shirts @ RM150 per pcs \n2. Nobuo Uematsu Final Fantasy Cloud Figurine @ RM 600\n3. Kanye West's Yeezy Boost 350V2 @ RM 800 \n4. Purchase Complete");
+        System.out.println("Welcome \n1. BLACKPINK signed T-Shirts @ RM150 per pcs \n2. Taylor Swift signed Vinyl Records @ RM 300\n3. Jay Chou Action Figure @ RM 800 \n4. Purchase Complete");
     }
 
     public static double itemPrice(int merchItem) {
@@ -29,11 +30,11 @@ public class Merchandise2 {
             itemPrice = 150.00;
         }
         if (merchItem == 2) {
-            System.out.println("You've ordered Cloud Figurine");
-            itemPrice = 600.00;
+            System.out.println("You've ordered Taylor Swift Vinyl Record ");
+            itemPrice = 300.00;
         }
         if (merchItem == 3) {
-            System.out.println("You've ordered Yeezy's ");
+            System.out.println("You've ordered Jay Chou Figurine ");
             itemPrice = 800.00;
         }
         quantity();
