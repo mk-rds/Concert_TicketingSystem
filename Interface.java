@@ -217,8 +217,20 @@ public class Interface {
             for (Interface Interface11 : Interface1) {
                 System.out.println(Interface11);
             }
-          
        
-       }
+          public static void DisplayTicket(){
+            System.out.println("1.CAT 1 [900] \n2.CAT 2 [800] \n3.CAT 3 [700] "
+                                 + "\n4.CAT 4 [600] \n5.CAT 5 [500]\n");
+            
+            System.out.println("Please Select the type of ticket : ");
+            int ticket = scan.nextInt();
+            SelectTicket(ticket);
+             
+            //prompt user to select ticket quantity
+            System.out.println("Please enter the quantity of ticket : ");
+            int ticket1 = scan.nextInt();
+          }
+       
+       
     
     }
