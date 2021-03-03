@@ -5,6 +5,12 @@
  */
 package assignment;
 
+import static assignment.Calc_payment.TicketPrice_CAT1;
+import static assignment.Calc_payment.TicketPrice_CAT2;
+import static assignment.Calc_payment.TicketPrice_CAT3;
+import static assignment.Calc_payment.TicketPrice_CAT4;
+import static assignment.Calc_payment.TicketPrice_CAT5;
+import static assignment.StockRemaining.BPstock_cat1;
 import java.util.Scanner;
 
 /**
@@ -18,7 +24,7 @@ public class Interface {
     private String concert_name;
     private String concert_time;
     private static int ticket_stock;
-    private int ticket;
+    
     private double quantity; //the quantity of ticket user choose
     private int index;
     public Interface() {
@@ -28,16 +34,16 @@ public class Interface {
         this.concert_name = concert_name;
         this.concert_time = concert_time;
         Interface.ticket_stock = ticket_stock;
-        this.ticket = ticket;
+     
         this.quantity = quantity;
   
     }
 
-    public Interface(int index,String concert_name, String concert_time, int ticket) {
+    public Interface(int index,String concert_name, String concert_time) {
         this.index = index;
         this.concert_name = concert_name;
         this.concert_time = concert_time;
-        this.ticket = ticket;
+        
     }
 
     public String getConcert_name() {
@@ -48,13 +54,7 @@ public class Interface {
         return concert_time;
     }
 
-    public int getTicket_stock() {
-        return Interface.ticket_stock - this.ticket;
-    }
-
-    public int getTicket() {
-        return ticket;
-    }
+    
 
     public double getQuantity() {
         return quantity;
@@ -67,7 +67,7 @@ public class Interface {
 
     @Override
     public String toString() {
-        return "\n"+index + ".Concert Details : "+concert_name +", "+ concert_time +"\n Ticket Available : "+ ticket  ;
+        return "\n"+index + ".Concert Details : "+concert_name +", "+ concert_time +"\n Ticket Available : ";
     }
  
     /**
@@ -80,9 +80,9 @@ public class Interface {
        
         System.out.println("\tConcert Available");
         // ticket array
-         Interface[] Interface1 ={new Interface(1,"Blackpink","2 March 2021 , 7pm",100),
-                                  new Interface(2,"Jay Chou","24 August 2021 , 7pm ",100),
-                                  new Interface(3,"Taylor Swift","13 December 2021 , 7pm",100)};
+         Interface[] Interface1 ={new Interface(1,"Blackpink","2 March 2021 , 7pm"),
+                                  new Interface(2,"Jay Chou","24 August 2021 , 7pm "),
+                                  new Interface(3,"Taylor Swift","13 December 2021 , 7pm")};
          //display array
          int count = 1 ;
         for (int i = 0 ; i < count ; i ++) {
@@ -90,9 +90,7 @@ public class Interface {
                 System.out.println(Interface11);
             }
           
-        System.out.println("\nPlease Select Concert : ");
-            int concert = scan.nextInt();
-            Selectconcert(concert);
+       
            
             // prompt user to select ticket type
        // while(ticket > 5 && 1 >= ticket){    
@@ -102,7 +100,7 @@ public class Interface {
             
             System.out.println("Please Select the type of ticket : ");
             int ticket = scan.nextInt();
-            Selectticket(ticket);
+            SelectTicket(ticket);
              
             //prompt user to select ticket quantity
             System.out.println("Please enter the quantity of ticket : ");
@@ -115,10 +113,22 @@ public class Interface {
         }
         }
         
-        public static void Selectconcert(int x) {
-             Interface[] Interface1 ={new Interface(1,"Blackpink","2 March 2021 , 7pm",100),
-                                  new Interface(2,"Jay Chou","24 August 2021 , 7pm ",100),
-                                  new Interface(3,"Taylor Swift","13 December 2021 , 7pm",100)};
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+        public static void selectConcert(int x) {
+             Interface[] Interface1 ={new Interface(1,"Blackpink","2 March 2021 , 7pm"),
+                                  new Interface(2,"Jay Chou","24 August 2021 , 7pm "),
+                                  new Interface(3,"Taylor Swift","13 December 2021 , 7pm")};
          //display array
         switch (x) {
                 case 1:
@@ -142,32 +152,43 @@ public class Interface {
        
     }
         
-        public static void Selectticket(int y){
-            double ticket;
+        public static void SelectTicket(int y){
+           Scanner scan  = new Scanner(System.in);
+           
          switch (y){
              
                 case 1:
-                  ticket = 900.00;
+                  System.out.println("enter your quantity :");
+                  double quantity = scan.nextDouble();
+                  TicketPrice_CAT1(quantity);
+                  BPstock_cat1(quantity);
                   break;
                     //TicketPrice_CAT1(quantity);
                     
                 case 2:
-                    ticket = 800/00 ;
+                    System.out.println("enter your quantity :");
+                    double quantity1 = scan.nextDouble();
+                    TicketPrice_CAT2(quantity1);
                     //TicketPrice_CAT2(quantity);
                     break;
                     
                 case 3:
+                    System.out.println("enter your quantity :");
+                    double quantity2 = scan.nextDouble();
+                    TicketPrice_CAT3(quantity2);
                     
-                    //TicketPrice_CAT3(quantity);
                     break;
                     
                 case 4:
-                    
-                   // TicketPrice_CAT4(quantity);
+                    System.out.println("enter your quantity :");
+                    double quantity3 = scan.nextDouble();
+                    TicketPrice_CAT4(quantity3);
                    break;
+                   
                 case 5:
-                    
-                    //TicketPrice_CAT5(quantity);
+                    System.out.println("enter your quantity :");
+                    double quantity4 = scan.nextDouble();
+                    TicketPrice_CAT5(quantity4);
                     break;
                     
                 default :
@@ -188,7 +209,7 @@ public class Interface {
             
             System.out.println("Please Select the type of ticket : ");
             int ticket = scan.nextInt();
-            Selectticket(ticket);
+            SelectTicket(ticket);
              
             //prompt user to select ticket quantity
             System.out.println("Please enter the quantity of ticket : ");
@@ -204,33 +225,39 @@ public class Interface {
                 break;
         }
         }
-        //display array
-       public static void displayConcert(){
+       
+        public static void displayConcert(){
             System.out.println("\tConcert Available");
-        // ticket array
-         Interface[] Interface1 ={new Interface(1,"Blackpink","2 March 2021 , 7pm",100),
-                                  new Interface(2,"Jay Chou","24 August 2021 , 7pm ",100),
-                                  new Interface(3,"Taylor Swift","13 December 2021 , 7pm",100)};
+        // ticket arrayS
+         Interface[] Interface1 ={new Interface(1,"Blackpink","2 March 2021 , 7pm"),
+                                  new Interface(2,"Jay Chou","24 August 2021 , 7pm "),
+                                  new Interface(3,"Taylor Swift","13 December 2021 , 7pm")};
          //display array
          int count = 1 ;
         
             for (Interface Interface11 : Interface1) {
                 System.out.println(Interface11);
             }
+            
+            System.out.println("\nPlease Select Concert : ");
+          
        
-          public static void DisplayTicket(){
-            System.out.println("1.CAT 1 [900] \n2.CAT 2 [800] \n3.CAT 3 [700] "
+        
+       
+       }
+        
+        public static void DisplayTicket(){
+            Scanner scan = new Scanner(System.in);
+            System.out.println("\n1.CAT 1 [900] \n2.CAT 2 [800] \n3.CAT 3 [700] "
                                  + "\n4.CAT 4 [600] \n5.CAT 5 [500]\n");
             
             System.out.println("Please Select the type of ticket : ");
             int ticket = scan.nextInt();
             SelectTicket(ticket);
              
-            //prompt user to select ticket quantity
-            System.out.println("Please enter the quantity of ticket : ");
-            int ticket1 = scan.nextInt();
+           
+            
+            
+            
           }
-       
-       
-    
     }
