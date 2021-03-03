@@ -119,12 +119,7 @@ public class Interface {
     
     
     
-    
-    
-    
-    
-    
-    
+ 
         public static void selectConcert(int x) {
              Interface[] Interface1 ={new Interface(1,"Blackpink","2 March 2021 , 7pm"),
                                   new Interface(2,"Jay Chou","24 August 2021 , 7pm "),
@@ -134,16 +129,19 @@ public class Interface {
                 case 1:
                     System.out.println("You have selected ");
                     System.out.println(Interface1[x-1]);
+                    BPSelectTicket();
                     break;
                     
                 case 2:
                     System.out.println("You have selected ");
                     System.out.println(Interface1[x-1]);
+                    JaySelectTicket();
                     break;
                             
                 case 3:
                     System.out.println("You have selected ");
                     System.out.println(Interface1[x-1]);
+                    TaylorSelectTicket();    
                     break;
                     
                 default:
@@ -151,8 +149,8 @@ public class Interface {
             } 
        
     }
-        
-        public static void SelectTicket(int y){
+        //blackpink ticket
+        public static void BPSelectTicket(int y){
            Scanner scan  = new Scanner(System.in);
            
          switch (y){
@@ -169,6 +167,7 @@ public class Interface {
                     System.out.println("enter your quantity :");
                     double quantity1 = scan.nextDouble();
                     TicketPrice_CAT2(quantity1);
+                    BPstock_cat2(quantity1);
                     //TicketPrice_CAT2(quantity);
                     break;
                     
@@ -176,19 +175,119 @@ public class Interface {
                     System.out.println("enter your quantity :");
                     double quantity2 = scan.nextDouble();
                     TicketPrice_CAT3(quantity2);
-                    
+                    BPstock_cat3(quantity2);
                     break;
                     
                 case 4:
                     System.out.println("enter your quantity :");
                     double quantity3 = scan.nextDouble();
                     TicketPrice_CAT4(quantity3);
+                    BPstock_cat4(quantity3);
                    break;
                    
                 case 5:
                     System.out.println("enter your quantity :");
                     double quantity4 = scan.nextDouble();
                     TicketPrice_CAT5(quantity4);
+                    BPstock_cat5(quantity4);
+                    break;
+                    
+                default :
+                    System.out.println("Type again");
+                    break;
+            }
+      
+        }
+                //Jaychou ticket
+            public static void JaySelectTicket(int y){
+           Scanner scan  = new Scanner(System.in);
+           
+         switch (y){
+             
+                case 1:
+                  System.out.println("enter your quantity :");
+                  double quantity = scan.nextDouble();
+                  TicketPrice_CAT1(quantity);
+                  Jaystock_cat1(quantity);
+                  break;
+                    //TicketPrice_CAT1(quantity);
+                    
+                case 2:
+                    System.out.println("enter your quantity :");
+                    double quantity1 = scan.nextDouble();
+                    TicketPrice_CAT2(quantity1);
+                    Jaystock_cat2(quantity1);
+                    //TicketPrice_CAT2(quantity);
+                    break;
+                    
+                case 3:
+                    System.out.println("enter your quantity :");
+                    double quantity2 = scan.nextDouble();
+                    TicketPrice_CAT3(quantity2);
+                    Jaystock_cat3(quantity2);
+                    break;
+                    
+                case 4:
+                    System.out.println("enter your quantity :");
+                    double quantity3 = scan.nextDouble();
+                    TicketPrice_CAT4(quantity3);
+                    Jaystock_cat4(quantity3);
+                   break;
+                   
+                case 5:
+                    System.out.println("enter your quantity :");
+                    double quantity4 = scan.nextDouble();
+                    TicketPrice_CAT5(quantity4);
+                    Jaystock_cat5(quantity4);
+                    break;
+                    
+                default :
+                    System.out.println("Type again");
+                    break;
+            }
+      
+        }
+                //Taylor ticket
+            public static void TaylorSelectTicket(int y){
+           Scanner scan  = new Scanner(System.in);
+           
+         switch (y){
+             
+                case 1:
+                  System.out.println("enter your quantity :");
+                  double quantity = scan.nextDouble();
+                  TicketPrice_CAT1(quantity);
+                  Taylorstock_cat1(quantity);
+                  break;
+                    //TicketPrice_CAT1(quantity);
+                    
+                case 2:
+                    System.out.println("enter your quantity :");
+                    double quantity1 = scan.nextDouble();
+                    TicketPrice_CAT2(quantity1);
+                    Taylorstock_cat2(quantity1);
+                    //TicketPrice_CAT2(quantity);
+                    break;
+                    
+                case 3:
+                    System.out.println("enter your quantity :");
+                    double quantity2 = scan.nextDouble();
+                    TicketPrice_CAT3(quantity2);
+                    Taylorstock_cat3(quantity2);
+                    break;
+                    
+                case 4:
+                    System.out.println("enter your quantity :");
+                    double quantity3 = scan.nextDouble();
+                    TicketPrice_CAT4(quantity3);
+                    Taylorstock_cat4(quantity3);
+                   break;
+                   
+                case 5:
+                    System.out.println("enter your quantity :");
+                    double quantity4 = scan.nextDouble();
+                    TicketPrice_CAT5(quantity4);
+                    Taylorstock_cat5(quantity5);
                     break;
                     
                 default :
