@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package Assignment;
 
 import java.util.Scanner;
@@ -15,7 +10,6 @@ public class Merchandise2 {
 
     public double subTotal;
     private static double itemPrice;
-    static Scanner input = new Scanner(System.in);
     public static double runningTotal;
     static boolean ordering = true;
 
@@ -42,6 +36,7 @@ public class Merchandise2 {
     }
 
     public static double quantity() {
+        Scanner input = new Scanner(System.in);
         System.out.println("Enter quantity");
         double quantity = input.nextDouble();
         subTotal(quantity, itemPrice);
@@ -57,31 +52,30 @@ public class Merchandise2 {
 
     public static void done(double runningTotal) {
         ordering = false;
-        System.out.println(runningTotal);
         System.out.println("Please come again, thank you!");
     }
 
     public static void main(String[] args) {
 
         int menuOption;
-        int merchItem = 0;
+        int merchItem;
         Scanner input = new Scanner(System.in);
         do {
-            double runningTotal = 0;
+            double runningTotal2 = 0;
             menu();
             menuOption = input.nextInt();
             switch (menuOption) {
                 case 1:
                     merchItem = 1;
-                    runningTotal += itemPrice(merchItem);
+                    runningTotal2 += itemPrice(merchItem);
                     break;
                 case 2:
                     merchItem = 2;
-                    runningTotal += itemPrice(merchItem);
+                    runningTotal2 += itemPrice(merchItem);
                     break;
                 case 3:
                     merchItem = 3;
-                    runningTotal += itemPrice(merchItem);
+                    runningTotal2 += itemPrice(merchItem);
                     break;
                 case 4:
                     done(runningTotal);
