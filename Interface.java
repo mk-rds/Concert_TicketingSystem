@@ -205,7 +205,7 @@ public class Interface {
         }
         }
         //display array
-       public static void display_concert(){
+       public static void displayConcert(){
             System.out.println("\tConcert Available");
         // ticket array
          Interface[] Interface1 ={new Interface(1,"Blackpink","2 March 2021 , 7pm",100),
@@ -218,10 +218,7 @@ public class Interface {
                 System.out.println(Interface11);
             }
           
-        System.out.println("\nPlease Select Concert : ");
-            int concert = scan.nextInt();
-            Selectconcert(concert);
-        
        
        }
+    
     }
