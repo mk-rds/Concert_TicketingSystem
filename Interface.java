@@ -35,7 +35,7 @@ public class Interface {
     public Interface() {
     }
 
-    public Interface(String concert_name, String concert_time, int ticket_stock, int ticket, double quantity) {
+    public Interface(String concert_name, String concert_time,int ticket) {
         this.concert_name = concert_name;
         this.concert_time = concert_time;
         Interface.ticket_stock = ticket_stock;
