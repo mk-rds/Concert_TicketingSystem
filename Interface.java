@@ -70,7 +70,21 @@ public class Interface {
         return "\n"+index + ".Concert Details : "+concert_name +", "+ concert_time +"\n Ticket Available : ";
     }
  
-    
+    public static void DisplayDetails(int h) {
+        switch (h) {
+            case 1:
+                System.out.printf("Concert Name: BlackPink\nConcert Date: 2 March 2021\nConcert Time: 7pm ");
+                break;
+            case 2:
+                  System.out.printf("Concert Name: Jay Chou\nConcert Date: 24 August 2021\nConcert Time: 7pm ");
+                break;
+            case 3:
+                  System.out.printf("Concert Name: Taylor Swift\nConcert Date: 13 December 2021\nConcert Time: 7pm ");
+                break;
+            default:
+                break;
+        }
+    }
         public static void selectConcert(int x) {
              Interface[] Interface1 ={new Interface(1,"Blackpink","2 March 2021 , 7pm"),
                                   new Interface(2,"Jay Chou","24 August 2021 , 7pm "),
