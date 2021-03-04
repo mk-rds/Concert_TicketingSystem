@@ -61,6 +61,41 @@ public class Merchandise2 {
         System.out.println("Please come again, thank you!");
     }
 
+        public static void Selection() {
+        int menuOption;
+        int merchItem;
+        Scanner input = new Scanner(System.in);
+        do {
+            double runningTotal2 = 0;
+            menu();
+            menuOption = input.nextInt();
+            switch (menuOption) {
+                case 1:
+                    merchItem = 1;
+                    runningTotal2 += itemPrice(merchItem);
+                    Stock.MerchStock_1(quantity2);
+                    break;
+                case 2:
+                    merchItem = 2;
+                    runningTotal2 += itemPrice(merchItem);
+                    Stock.MerchStock_2(quantity2);
+                    break;
+                case 3:
+                    merchItem = 3;
+                    runningTotal2 += itemPrice(merchItem);
+                    Stock.MerchStock_3(quantity2);
+                    break;
+                case 4:
+                    done(runningTotal);
+                    break;
+                default:
+                    System.out.println("Invalid option.");
+            }
+        } while (ordering);
+        System.out.println("Total amount: RM " + runningTotal);
+    }
+    
+    
     public static void main(String[] args) {
 
         int menuOption;
