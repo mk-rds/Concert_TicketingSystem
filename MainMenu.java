@@ -5,12 +5,16 @@
  */
 package assignment;
 
-import static assignment.Calc_payment.TicketPrice_CAT1;
-import static assignment.Calc_payment.TicketPrice_CAT2;
+
+import static Assignment.Merchandise2.Selection;
+import static Assignment.Merchandise2.menu;
 import static assignment.Calc_payment.TicketSold;
 import static assignment.Calc_payment.revenue;
-import static assignment.StockRemaining.BPstock_cat1;
-import static assignment.StockRemaining.BPstock_cat2;
+import static assignment.Interface.DisplayTicketBP;
+import static assignment.Interface.DisplayTicketJay;
+import static assignment.Interface.DisplayTicketTaylor;
+import static assignment.Interface.displayConcert;
+import static assignment.Interface.selectConcert;
 import static assignment.customer.login_verification;
 import java.util.Scanner;
 
@@ -18,13 +22,15 @@ import java.util.Scanner;
  *
  * @author User
  */
-public class MainMenu {
-
-  
+public class MainMenu{
    
      private customer customer;
     
     public MainMenu(){
+        
+    }
+    
+    public MainMenu(int i){
         
     }
     
@@ -34,43 +40,51 @@ public class MainMenu {
         
        System.out.print("LOGIN [1]");
        int option;
+       int choose;
        option = input.nextInt();
        if(option == 1){
            login_verification();
        }
        
-       double quantity;
-      
        
+       double quantity;
+       int seat;
+      
+
        do{
-           System.out.println("[1] INTERFACE");
-           System.out.println("[5] QUIT");
+           System.out.println("\n[1] INTERFACE");
+           System.out.println("[2] MERCHANDISE");
+           System.out.println("[3] QUIT");
+         
            option = input.nextInt();
            
            if(option == 1){
-               System.out.print("enter what concert :");
-                option = input.nextInt();
+                displayConcert();//display interface()
+                option = input.nextInt(); //select concert
             switch(option){
-                case 1: System.out.print("choose your seat ");
-                   int seat;
-                   seat = input.nextInt();
-                   switch(seat){
-                       case 1:System.out.print("enter quantity in CAT1 :");
-                              quantity = input.nextDouble();
-                              TicketPrice_CAT1(quantity);
-                              BPstock_cat1(quantity);
-                              break;
-                              
-                       case 2:System.out.print("enter quantity in CAT2 :");
-                              quantity = input.nextDouble();
-                              TicketPrice_CAT2(quantity);
-                              BPstock_cat2(quantity);
-                              break;
-                   }
-                   
-                   
-           case 2:System.out.print("choose your seat");
-       }
+                case 1: selectConcert(option); //select concert
+                        StockRemaining.displayBP_stock(); //display all seat remaining
+                        DisplayTicketBP();
+                        break;
+                case 2: selectConcert(option); //select concert
+                        StockRemaining.displayJay_stock(); //display all seat remaining
+                        DisplayTicketJay();
+                        break;
+                case 3: selectConcert(option); //select concert
+                        StockRemaining.displayTaylor_stock(); //display all seat remaining
+                        DisplayTicketTaylor();
+                        break;
+                
+         }
+           }
+           else if(option == 2){
+               do{
+               menu();
+               choose = input.nextInt();
+               Selection(choose);
+               
+               }while(choose != 4);
+               
            }
            
            
