@@ -95,16 +95,16 @@ public class Interface {
             // prompt user to select ticket type
        // while(ticket > 5 && 1 >= ticket){    
        
-            System.out.println("1.CAT 1 [900] \n2.CAT 2 [800] \n3.CAT 3 [700] "
-                                 + "\n4.CAT 4 [600] \n5.CAT 5 [500]\n");
+//             System.out.println("1.CAT 1 [900] \n2.CAT 2 [800] \n3.CAT 3 [700] "
+//                                  + "\n4.CAT 4 [600] \n5.CAT 5 [500]\n");
             
-            System.out.println("Please Select the type of ticket : ");
-            int ticket = scan.nextInt();
-            SelectTicket(ticket);
+//             System.out.println("Please Select the type of ticket : ");
+//             int ticket = scan.nextInt();
+//             SelectTicket(ticket);
              
-            //prompt user to select ticket quantity
-            System.out.println("Please enter the quantity of ticket : ");
-            int ticket1 = scan.nextInt();
+//             //prompt user to select ticket quantity
+//             System.out.println("Please enter the quantity of ticket : ");
+//             int ticket1 = scan.nextInt();
             
          //prompt user whether wanna add tickets
             System.out.println("Do you want to add on ticket ? \n 1.YES \n 2. Continue to Payment");
@@ -129,18 +129,21 @@ public class Interface {
                 case 1:
                     System.out.println("You have selected ");
                     System.out.println(Interface1[x-1]);
+                    DisplayTicket();
                     BPSelectTicket();
                     break;
                     
                 case 2:
                     System.out.println("You have selected ");
                     System.out.println(Interface1[x-1]);
+                    DisplayTicket();
                     JaySelectTicket();
                     break;
                             
                 case 3:
                     System.out.println("You have selected ");
                     System.out.println(Interface1[x-1]);
+                    DisplayTicket();
                     TaylorSelectTicket();    
                     break;
                     
