@@ -14,6 +14,9 @@ import java.util.Scanner;
  */
 public class Merchandise2 {
 
+    public static double bpshirtTotal;
+    public static double tsTotal;
+    public static double jaychouTotal;
     public double subTotal;
     private static double itemPrice;
     public static double runningTotal;
@@ -56,15 +59,16 @@ public class Merchandise2 {
         if (quantity2 > merch_1) {
             System.out.println("Quantity exceeded stocks, please order in accordance with the amount of tickets left");
             int choose;
-
+            do {
 
                 menu();
                 choose = input.nextInt();
                 Selection(choose);
 
+            } while (choose != 4);
 
         } else {
-            subTotal(quantity2, itemPrice);
+            subTotal2(quantity2, itemPrice);
         }
         return quantity2;
     }
@@ -76,13 +80,16 @@ public class Merchandise2 {
         if (quantity2 > merch_2) {
             System.out.println("Quantity exceeded stocks, please order in accordance with the amount of tickets left");
             int choose;
-
+            do {
 
                 menu();
                 choose = input.nextInt();
                 Selection(choose);
+
+            } while (choose != 4);
+
         } else {
-            subTotal(quantity2, itemPrice);
+            subTotal3(quantity2, itemPrice);
         }
         return quantity2;
     }
@@ -94,25 +101,50 @@ public class Merchandise2 {
         if (quantity2 > merch_3) {
             System.out.println("Quantity exceeded stocks, please order in accordance with the amount of tickets left");
 
-            menu();
             int choose;
-            choose = input.nextInt();
-            Selection(choose);
+            do {
+
+                menu();
+                choose = input.nextInt();
+                Selection(choose);
+
+            } while (choose != 4);
+
         } else {
-            subTotal(quantity2, itemPrice);
+            subTotal4(quantity2, itemPrice);
         }
         return quantity2;
     }
 
-    public static double subTotal(double quantity, double itemPrice) {
-        double subTotal = quantity * itemPrice;
-        System.out.println("Subtotal: RM " + subTotal);
-        runningTotal += subTotal;
-        return subTotal;
+    public static double subTotal2(double quantity, double itemPrice) {
+        double subTotal2 = quantity * itemPrice;
+        System.out.println("Subtotal : RM " + subTotal2);
+        bpshirtTotal += subTotal2;
+        runningTotal += subTotal2;
+        return subTotal2;
+    }
+
+    public static double subTotal3(double quantity, double itemPrice) {
+        double subTotal3 = quantity * itemPrice;
+        System.out.println("Subtotal : RM " + subTotal3);
+        tsTotal += subTotal3;
+        runningTotal += subTotal3;
+        return subTotal3;
+    }
+
+    public static double subTotal4(double quantity, double itemPrice) {
+        double subTotal4 = quantity * itemPrice;
+        System.out.println("Subtotal : RM " + subTotal4);
+        jaychouTotal += subTotal4;
+        runningTotal += subTotal4;
+        return subTotal4;
     }
 
     public static void done(double runningTotal) {
-        System.out.println("Total purchased : RM " + runningTotal);
+        System.out.println("BLACKPINK T-SHIRTS TOTAL         : RM " + bpshirtTotal);
+        System.out.println("TAYLOR SWIFT VINYL RECORDS TOTAL : RM " + tsTotal);
+        System.out.println("JAYCHOU ACTION FIGURE TOTAL      : RM " + jaychouTotal);
+        System.out.println("TOTAL AMOUNT PURCHASED           : RM " + runningTotal);
         System.out.println("Please come again, thank you!");
         System.exit(0);
     }
