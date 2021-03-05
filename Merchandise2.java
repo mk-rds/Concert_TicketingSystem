@@ -27,24 +27,25 @@ public class Merchandise2 {
         System.out.print(c1);
         System.out.print(c2);
         System.out.println(c3);
-        System.out.println("   Stocks Remaining : " + (int) merch_1 + "         Stocks Remaining : " + (int) merch_2 + "                       Stocks Remaining : " + (int) merch_3 );
+        System.out.println("   Stocks Remaining : " + (int) merch_1 + "         Stocks Remaining : " + (int) merch_2 + "                       Stocks Remaining : " + (int) merch_3);
     }
 
     public static double itemPrice(int merchItem) {
         if (merchItem == 1) {
             System.out.println("You've ordered Blackpink T shirt");
             itemPrice = 150.00;
-
+            quantity();
         }
         if (merchItem == 2) {
             System.out.println("You've ordered Taylor Swift Vinyl Record ");
             itemPrice = 300.00;
+            quantity2();
         }
         if (merchItem == 3) {
             System.out.println("You've ordered Jay Chou Figurine ");
             itemPrice = 800.00;
+            quantity3();
         }
-        quantity();
         return itemPrice;
     }
 
@@ -52,7 +53,54 @@ public class Merchandise2 {
         Scanner input = new Scanner(System.in);
         System.out.println("Enter quantity");
         Merchandise2.quantity2 = input.nextDouble();
-        subTotal(quantity2, itemPrice);
+        if (quantity2 > merch_1) {
+            System.out.println("Quantity exceeded stocks, please order in accordance with the amount of tickets left");
+            int choose;
+
+
+                menu();
+                choose = input.nextInt();
+                Selection(choose);
+
+
+        } else {
+            subTotal(quantity2, itemPrice);
+        }
+        return quantity2;
+    }
+
+    public static double quantity2() {
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter quantity");
+        Merchandise2.quantity2 = input.nextDouble();
+        if (quantity2 > merch_2) {
+            System.out.println("Quantity exceeded stocks, please order in accordance with the amount of tickets left");
+            int choose;
+
+
+                menu();
+                choose = input.nextInt();
+                Selection(choose);
+        } else {
+            subTotal(quantity2, itemPrice);
+        }
+        return quantity2;
+    }
+
+    public static double quantity3() {
+        Scanner input = new Scanner(System.in);
+        System.out.println("Enter quantity");
+        Merchandise2.quantity2 = input.nextDouble();
+        if (quantity2 > merch_3) {
+            System.out.println("Quantity exceeded stocks, please order in accordance with the amount of tickets left");
+
+            menu();
+            int choose;
+            choose = input.nextInt();
+            Selection(choose);
+        } else {
+            subTotal(quantity2, itemPrice);
+        }
         return quantity2;
     }
 
@@ -64,10 +112,9 @@ public class Merchandise2 {
     }
 
     public static void done(double runningTotal) {
-        ordering = false;
-
         System.out.println("Total purchased : RM " + runningTotal);
         System.out.println("Please come again, thank you!");
+        System.exit(0);
     }
 
     public static void Selection(int option) {
