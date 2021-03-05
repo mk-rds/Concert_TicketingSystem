@@ -10,6 +10,7 @@ import static Assignment.Merchandise2.Selection;
 import static Assignment.Merchandise2.menu;
 import static assignment.Calc_payment.TicketSold;
 import static assignment.Calc_payment.revenue;
+import static assignment.Interface.DisplayDetails;
 import static assignment.Interface.DisplayTicketBP;
 import static assignment.Interface.DisplayTicketJay;
 import static assignment.Interface.DisplayTicketTaylor;
@@ -39,6 +40,7 @@ public class MainMenu{
         customer cus = new customer();
         
        System.out.print("LOGIN [1]");
+       int alternative;
        int option;
        int choose;
        option = input.nextInt();
@@ -56,40 +58,61 @@ public class MainMenu{
            System.out.println("[2] MERCHANDISE");
            System.out.println("[3] QUIT");
          
-           option = input.nextInt();
+           alternative = input.nextInt();
            
-           if(option == 1){
-                displayConcert();//display interface()
-                option = input.nextInt(); //select concert
+          switch(alternative){
+               
+              case 1:      do{
+                    displayConcert();//display interface()
+                    option = input.nextInt(); //select concert
             switch(option){
                 case 1: selectConcert(option); //select concert
                         StockRemaining.displayBP_stock(); //display all seat remaining
                         DisplayTicketBP();
+                        DisplayDetails(option);
+                        
                         break;
                 case 2: selectConcert(option); //select concert
                         StockRemaining.displayJay_stock(); //display all seat remaining
                         DisplayTicketJay();
+                        DisplayDetails(option);
                         break;
                 case 3: selectConcert(option); //select concert
                         StockRemaining.displayTaylor_stock(); //display all seat remaining
                         DisplayTicketTaylor();
+                        DisplayDetails(option);
+                        break;
+                        
+                default:
+                        System.out.println("wrong input");
                         break;
                 
+                
          }
-           }
-           else if(option == 2){
+           
+            }while(option !=1 && option != 2 && option != 3);
+              break;
+                
+              case 2: {
                do{
                menu();
                choose = input.nextInt();
                Selection(choose);
                
                }while(choose != 4);
+               break;
                
            }
            
+              default:{
+               System.out.println("wrong input ");
+               break;
+           }
            
            
-       }while(option != 5);
+           }
+           
+       }while(alternative != 3);
        
        
        
