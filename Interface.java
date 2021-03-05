@@ -131,12 +131,15 @@ public class Interface {
        }
         
         public static void DisplayTicketBP(){
+            do{
             Scanner scan = new Scanner(System.in);
             System.out.println("\n1.CAT 1 [900] \n2.CAT 2 [800] \n3.CAT 3 [700] "
                                  + "\n4.CAT 4 [600] \n5.CAT 5 [500]\n");
             
             System.out.println("Please Select the type of ticket : ");
             int ticket = scan.nextInt();
+            
+            }(while ticket != 5 && ticket != 4 && ticket != 3 && ticket != 2 && ticket != 1);
             
             BPSelectTicket(ticket);
             
@@ -148,12 +151,15 @@ public class Interface {
           }
         
         public static void DisplayTicketJay(){
+            do {
             Scanner scan = new Scanner(System.in);
             System.out.println("\n1.CAT 1 [900] \n2.CAT 2 [800] \n3.CAT 3 [700] "
                                  + "\n4.CAT 4 [600] \n5.CAT 5 [500]\n");
             
             System.out.println("Please Select the type of ticket : ");
             int ticket = scan.nextInt();
+                
+            }(while ticket != 5 && ticket != 4 && ticket != 3 && ticket != 2 && ticket != 1);
             
             JaySelectTicket(ticket);
             
@@ -165,12 +171,15 @@ public class Interface {
           }
         
         public static void DisplayTicketTaylor(){
+            do{
             Scanner scan = new Scanner(System.in);
             System.out.println("\n1.CAT 1 [900] \n2.CAT 2 [800] \n3.CAT 3 [700] "
                                  + "\n4.CAT 4 [600] \n5.CAT 5 [500]\n");
             
             System.out.println("Please Select the type of ticket : ");
             int ticket = scan.nextInt();
+                
+            }(while ticket != 5 && ticket != 4 && ticket != 3 && ticket != 2 && ticket != 1);
             
             TaylorSelectTicket(ticket);
             
