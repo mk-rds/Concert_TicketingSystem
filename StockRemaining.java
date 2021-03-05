@@ -142,30 +142,30 @@ public class StockRemaining {
         
     }
     
-    public static void MerchStock_1(double quantity){
-        merch_1 = merch_1 - quantity;
-        double remaining;
-        remaining = merch_1;
-        System.out.print("\nremaining stock :" + (int)remaining);
-               
+    public static void MerchStock_1(double quantity) {
+        if (quantity <= merch_1) {
+            merch_1 = merch_1 - quantity;
+            double remaining;
+            remaining = merch_1;
+        } else {
+        }
     }
-    
-    public static void MerchStock_2(double quantity){
-        merch_2 = merch_2 - quantity;
-        double remaining;
-        remaining = merch_2;
-        System.out.print("\nremaining stock :" + (int)remaining);
-       
-               
+    public static void MerchStock_2(double quantity) {
+        if (quantity <= merch_2) {
+            merch_2 = merch_2 - quantity;
+            double remaining;
+            remaining = merch_2;
+        } else {
+        }
     }
-    
-    public static void MerchStock_3(double quantity){
-        merch_3 = merch_3 - quantity;
-        double remaining;
-        remaining = merch_3;
-        System.out.print("\nremaining stock :" + (int)remaining);
-        
-               
+
+    public static void MerchStock_3(double quantity) {
+        if (quantity <= merch_3) {
+            merch_3 = merch_3 - quantity;
+            double remaining;
+            remaining = merch_3;
+        } else {
+        }
     }
 
     public static void BPstock_cat1(){
