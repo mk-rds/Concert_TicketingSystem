@@ -5,6 +5,8 @@
  */
 package assignment;
 
+
+
 /**
  *
  * @author User
@@ -14,14 +16,16 @@ public class Calc_payment {
     public static final double GST = 0.06;
     public static int TicketSold=0;
     public static double revenue;
-    
+    public static double TotalPayment=0;
    
-    public static void TicketPrice_CAT1(double quantity){
+    public static double TicketPrice_CAT1(double quantity){
        double total = 900 * quantity + (GST * 900 * quantity);
-       System.out.print("total :" + total);
+       System.out.println("total :" + total);
        TicketSold += quantity;
        revenue += total;
+       TotalPayment = total;
        
+       return total;
     }
     
     public static void TicketPrice_CAT2(double quantity){
@@ -29,6 +33,8 @@ public class Calc_payment {
        System.out.print("total :" + total);
         TicketSold += quantity;
         revenue += total;
+        TotalPayment = total;
+        
     }
     
     public static void TicketPrice_CAT3(double quantity){
@@ -36,6 +42,7 @@ public class Calc_payment {
        System.out.print("total :" + total);
        TicketSold += quantity;
        revenue += total;
+       TotalPayment = total;
     }
     
     public static void TicketPrice_CAT4(double quantity){
@@ -43,6 +50,7 @@ public class Calc_payment {
        System.out.print("total :" + total);
        TicketSold += quantity;
        revenue += total;
+       TotalPayment = total;
     }
     
     public static void TicketPrice_CAT5(double quantity){
@@ -50,6 +58,7 @@ public class Calc_payment {
        System.out.print("total :" + total);
        TicketSold += quantity;
        revenue += total;
+       TotalPayment = total;
         
     }
     
