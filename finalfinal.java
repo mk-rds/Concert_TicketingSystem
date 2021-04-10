@@ -477,7 +477,7 @@ public class finalfinal {
                                                         System.out.print("\n\t\t\t\t\t\t\tINSUFFICIENT AMOUNT SELECTED\n");
                                                     }
 
-                                                    ticket[option - 1].printReceipt(choose, Concert[option - 1], quantity, total);
+                                                    ticket[option - 1].printReceipt1(choose, Concert[option - 1], quantity, total);
                                                     break;
 
                                                 case 2:
@@ -511,7 +511,7 @@ public class finalfinal {
                                                         System.out.print("\n\t\t\t\t\t\t\tINSUFFICIENT AMOUNT SELECTED\n");
                                                     }
 
-                                                    ticket[option - 1].printReceipt(choose, Concert[option - 1], quantity, total);
+                                                    ticket[option - 1].printReceipt1(choose, Concert[option - 1], quantity, total);
                                                     break;
 
                                                 case 3:
@@ -545,7 +545,7 @@ public class finalfinal {
                                                         System.out.print("\n\t\t\t\t\t\t\tINSUFFICIENT AMOUNT SELECTED\n");
                                                     }
 
-                                                    ticket[option - 1].printReceipt(choose, Concert[option - 1], quantity, total);
+                                                    ticket[option - 1].printReceipt1(choose, Concert[option - 1], quantity, total);
                                                     break;
 
                                                 case 4:
@@ -579,7 +579,7 @@ public class finalfinal {
                                                         System.out.print("\n\t\t\t\t\t\t\tINSUFFICIENT AMOUNT SELECTED\n");
                                                     }
 
-                                                    ticket[option - 1].printReceipt(choose, Concert[option - 1], quantity, total);
+                                                    ticket[option - 1].printReceipt1(choose, Concert[option - 1], quantity, total);
                                                     break;
 
                                                 case 5:
@@ -613,7 +613,7 @@ public class finalfinal {
                                                         System.out.print("\n\t\t\t\t\t\t\tINSUFFICIENT AMOUNT SELECTED\n");
                                                     }
 
-                                                    ticket[option - 1].printReceipt(choose, Concert[option - 1], quantity, total);
+                                                    ticket[option - 1].printReceipt1(choose, Concert[option - 1], quantity, total);
                                                     break;
 
                                             }
@@ -915,6 +915,7 @@ public class finalfinal {
                                             switch (choose) {
 
                                                 case 1:
+                                                    
                                                     System.out.println("\t\t\t\t\t\t" + Staffarr[1].getName() + "'s salary now is RM" + Staffarr[1].getBasicSalary());
                                                     System.out.print("\n\t\t\t\t\t\tHow much to be added(basic) : ");
                                                     salary = input.nextInt();
