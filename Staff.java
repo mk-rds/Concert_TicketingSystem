@@ -75,14 +75,7 @@ public class Staff {
         this.accountNumber = accountNumber;
     }
     
-    public void deposit(double x){
-         this.balance += x;
-    }
-    
-    public void withdrawal(double x){
-         this.balance -= x;
-    }
-    
+      
     public void depositSalary(double salary){
         basicSalary += salary;
     }
