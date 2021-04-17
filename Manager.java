@@ -46,9 +46,9 @@ public class Manager extends Staff{
          double percentangeBP = (double)subtotalBP/(double)revenue * 100; 
          double percentangeJay = (double)subtotalJay/(double)revenue * 100;
          
-         System.out.println("total revenue today : " + revenue);
-         System.out.println("blackpink revenue :" +percentangeBP + " %");
-         System.out.println("jay chou revenue :" +percentangeJay + " %");
+         System.out.println("\t\t\t\t\tTotal revenue earned today\t: " + revenue);
+         System.out.println("\t\t\t\t\tBlackpink revenue\t\t: " +percentangeBP + " %");
+         System.out.println("\t\t\t\t\tJay Chou revenue\t\t: " +percentangeJay + " %");
          
 
 }
