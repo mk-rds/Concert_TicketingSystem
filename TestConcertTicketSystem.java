@@ -13,7 +13,7 @@ import java.util.*;
  *
  * @author mingkit
  */
-public class FinalDemo {
+public class TestConcertTicketSystem {
 
     /**
      * @param args the command line arguments
