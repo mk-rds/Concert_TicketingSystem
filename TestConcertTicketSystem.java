@@ -839,7 +839,7 @@ public class TestConcertTicketSystem {
                                     do {
 
                                         try {
-                                            System.out.println("\n\n\t\t\t\t\t\t\t[1] Calculate Salary\n\t\t\t\t\t\t\t[2] Add Salary\n\t\t\t\t\t\t\t[3] Display job positions \n\n\t\t\t\t\t\tPress any key(except 1-3) to return to main menu\t");
+                                            System.out.println("\n\n\t\t\t\t\t\t\t[1] Calculate Salary\n\t\t\t\t\t\t\t[2] Add Salary\n\t\t\t\t\t\t\t[3] Display job positions\n\t\t\t\t\t\t\t[4] Total Revenue \n\n\t\t\t\t\t\tPress any key(except 1-4) to return to main menu\t");
                                             option = input.nextInt();
                                             continueInput = false;
                                         } catch (InputMismatchException ex) {
@@ -949,6 +949,7 @@ public class TestConcertTicketSystem {
                                             break;
 
                                         case 4:
+                                            System.out.println("\t\t\t\t\t\t\t    TOTAL REVENUE\n\t\t\t\t\t-------------------------------------------------------");
                                             M1.Calc_revenuePercentange(subtotalBP, subtotalJay);
                                             break;
                                     }
