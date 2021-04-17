@@ -14,7 +14,7 @@ public class Register {
      private String name1;
     private String email1;
     private String password1;
-    private String confpassword1;
+    
 
     public Register() {
     }
@@ -51,13 +51,9 @@ public class Register {
         this.password1 = password1;
     }
 
-    public String getConfpassword1() {
-        return confpassword1;
-    }
 
-    public void setConfpassword1(String confpassword1) {
-        this.confpassword1 = confpassword1;
-    }
+
+    
  
  
     public static boolean emailVerify(String email) {
